@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="response">
+        <item>太容易</item>
+        <item>普通</item>
+        <item>太困難了</item>
+    </string-array>
+
+    <string-array name="response2">
+        <item>蘋果</item>
+        <item>香蕉</item>
+        <item>哈密瓜</item>
+    </string-array>
+
+</resources>
