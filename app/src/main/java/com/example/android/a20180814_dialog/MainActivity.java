@@ -184,14 +184,14 @@ public class MainActivity extends AppCompatActivity
         //AlertDialog Fragment
         // 自訂 帥氣
         public void click7 (View view){
-            DialogFragment dialog = new MyDialogFragment();
-            dialog.show(getSupportFragmentManager(), "MyDialogFragment");
+            DialogFragment dialog = new MyDialogFragment();                          // 建立自訂的 Dialog
+            dialog.show(getSupportFragmentManager(), "MyDialogFragment");       // 顯示 Dialog
         }
+        // Fragment Callback (由 Fragment 呼叫)
         @Override
         public void ok() {
             tv.setText("登入");
         }
-
         @Override
         public void cancel() {
             tv.setText("取消登入");
