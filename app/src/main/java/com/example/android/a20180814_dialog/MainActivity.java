@@ -189,8 +189,8 @@ public class MainActivity extends AppCompatActivity
         }
         // Fragment Callback (由 Fragment 呼叫)
         @Override
-        public void ok() {
-            tv.setText("登入");
+        public void ok(String s) {
+            tv.setText(s);
         }
         @Override
         public void cancel() {

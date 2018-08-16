@@ -22,12 +22,12 @@ public class MyDialogFragment extends DialogFragment {
 
     //合約
     public interface 收結果{
-        public abstract void ok();
+        public abstract void ok(String s);
         public abstract void cancel();
     }
 
-    private EditText username;
-    private EditText password;
+    private EditText m_ed_username;
+    private EditText m_ed_password;
 
     // 無參數建構子是必須的
     public MyDialogFragment() {
@@ -49,8 +49,8 @@ public class MyDialogFragment extends DialogFragment {
         View view = inflater.inflate(R.layout.fragment_my_dialog, null);
 
         //初始化 edit_view
-        username = (EditText)view.findViewById(R.id.ed_username);
-        password = (EditText)view.findViewById(R.id.ed_password);
+        m_ed_username = (EditText)view.findViewById(R.id.ed_username);
+        m_ed_password = (EditText)view.findViewById(R.id.ed_password);
 
         // 建立 AlertDialog
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
@@ -61,7 +61,7 @@ public class MyDialogFragment extends DialogFragment {
                         Activity activity = getActivity();
                         if (activity instanceof 收結果){
                             收結果 x = (收結果) activity;
-                            x.ok();
+                            x.ok(m_ed_username.getText().toString());
                         }else{
                             throw new RuntimeException("搞什麼,Activity 沒有實作 收結果");
                         }
